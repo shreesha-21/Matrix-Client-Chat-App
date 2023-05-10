@@ -12,6 +12,7 @@ class Convo extends StatelessWidget {
     ChatMessage("Where are you?", "sender"),
   ];
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,6 +21,7 @@ class Convo extends StatelessWidget {
           elevation: 0,
           backgroundColor: Colors.grey[900],
           title: Row(
+
             children: <Widget>[
               CircleAvatar(
                 backgroundImage: NetworkImage(
@@ -48,7 +50,7 @@ class Convo extends StatelessWidget {
                   Text(
                     'Online',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.green,
                       fontSize: 13,
                     ),
                   )
@@ -85,7 +87,11 @@ class Convo extends StatelessWidget {
                     padding: EdgeInsets.all(16),
                     child: Text(
                       messages[index].messageContent,
-                      style: TextStyle(color: Colors.white, fontSize: 17),
+                      style: TextStyle(
+                          fontFamily: 'EDU',
+                          letterSpacing: 1.5,
+                          color: Colors.white,
+                          fontSize: 17),
                     ),
                   ),
                 ),

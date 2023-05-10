@@ -10,12 +10,13 @@ class ChatHomePage extends StatefulWidget {
   final Client client;
   final ProfileInformation profile;
   const ChatHomePage({super.key, required this.client, required this.profile});
-
   @override
   State<ChatHomePage> createState() => _ChatHomePageState();
 }
 //Profile
 //get accountData => _accountData;
+
+
 
 class _ChatHomePageState extends State<ChatHomePage> {
   @override
@@ -29,22 +30,14 @@ class _ChatHomePageState extends State<ChatHomePage> {
               child: Row(
                 children: [
                   Expanded(
-                    flex: 1,
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.home,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  Expanded(
                     flex: 6,
                     child: Center(
                       child: Text('MatChat',
                           style: TextStyle(
+                            fontFamily: 'obitron',
                             color: Colors.white,
-                            fontSize: 20,
+                            fontSize: 25,
+                            letterSpacing: 1.5
                           )),
                     ),
                   ),
@@ -110,12 +103,16 @@ class _ChatHomePageState extends State<ChatHomePage> {
                           children: [
                             Text('Rick Astley',
                                 style: TextStyle(
+                                  fontFamily: 'EDU',
                                   color: Colors.white,
-                                  fontSize: 20,
+                                  fontSize: 23,
+                                  letterSpacing: 1.6,
                                   fontWeight: FontWeight.bold,
                                 )),
                             Text('Never gonna give you up',
                                 style: TextStyle(
+                                  fontFamily: 'EDU',
+                                  letterSpacing: 1.4,
                                   color: Colors.grey[300],
                                 ))
                           ],
