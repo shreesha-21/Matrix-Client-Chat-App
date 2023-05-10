@@ -25,21 +25,19 @@ class _ChatHomePageState extends State<ChatHomePage> {
         backgroundColor: Colors.grey[850],
         appBar: AppBar(
             backgroundColor: Colors.black,
-            centerTitle: true,
-            title: Center(
+            title: Padding(
+              padding: const EdgeInsets.fromLTRB(15, 8, 8, 10),
               child: Row(
                 children: [
                   Expanded(
                     flex: 6,
-                    child: Center(
-                      child: Text('MatChat',
-                          style: TextStyle(
-                            fontFamily: 'obitron',
-                            color: Colors.white,
-                            fontSize: 25,
-                            letterSpacing: 1.5
-                          )),
-                    ),
+                    child: Text('MatChat',
+                        style: TextStyle(
+                          fontFamily: 'obitron',
+                          color: Colors.white,
+                          fontSize: 25,
+                          letterSpacing: 1.5
+                        )),
                   ),
                   Expanded(
                     flex: 1,

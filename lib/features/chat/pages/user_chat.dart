@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:matrix_chat_app/features/chat/chat_class.dart';
+import 'package:matrix/matrix.dart';
+
+import '../../user_preferences/pages/chat_settings.dart';
 
 class Convo extends StatelessWidget {
   Convo({Key? key}) : super(key: key);
@@ -32,6 +35,7 @@ class Convo extends StatelessWidget {
                 width: 12,
               ),
               Expanded(
+                flex: 6,
                   child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -56,9 +60,18 @@ class Convo extends StatelessWidget {
                   )
                 ],
               )),
-              Icon(
-                Icons.settings,
-                color: Colors.white,
+              Expanded(
+                flex :1,
+                child: IconButton(
+                  onPressed: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (context) {
+                              return ChatSettings();
+                        }));
+                  },
+                  icon: Icon(Icons.settings,
+                  color: Colors.white),
+                ),
               ),
             ],
           ),
